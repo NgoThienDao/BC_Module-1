@@ -1,0 +1,41 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form> <br>
+        <fieldset>
+            <legend>Chuyển đổi tiền </legend>
+            Amount
+            <input type="text" id="money">
+            From Currency
+            <select name="money1">
+                <option value="VN">VNĐ</option>
+
+            </select>
+            To Currency
+            <select name="money2">
+                <option value="USD">USD</option>
+            </select>
+            <input type="button" onclick="toVND()" value="Convert">
+            <p id="ketqua"></p>
+        </fieldset>
+    </form>
+    <script>
+        function toVND() {
+            var money = document.getElementById("money").value;
+            money = parseFloat(money);
+            var kq = money / 23000;
+            document.getElementById("ketqua").innerHTML=kq;
+        }
+    </script>
+</body>
+
+</html>

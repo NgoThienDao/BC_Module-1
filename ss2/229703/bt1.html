@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Điểm trung bình và tổng điểm Sinh, Lý, Hóa</title>
+</head>
+<body>
+	<script>
+		let Ly;
+		let Hoa;
+		let Sinh;
+		Ly = prompt("Nhập điểm Lý: ");
+		Hoa = prompt("Nhập điểm Hóa: ");
+		Sinh = prompt("Nhập điểm Sinh");
+		let a = parseInt(Ly);
+        let b = parseInt(Hoa);
+        let c = parseInt(Sinh);
+        let DiemTrungBinh = (a + b + c)/3;
+        let TongDiem = a + b + c;
+        alert("Điểm trung bình là: " + DiemTrungBinh + " " + "và Tổng điểm là : " + TongDiem);
+	</script>
+</body>
+</html>
