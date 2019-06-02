@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xét điều kiện vào lớp 10</title>
+</head>
+<body>
+	Nhập tuổi: <input type="number" id="age">
+	<button onclick="tuoi()">Submit</button>
+	<p id="kq"></p>
+	<script>
+		function tuoi(){
+		    var nhaptuoi=parseInt(document.getElementById("age").value);
+		    if(nhaptuoi<16){
+			document.getElementById("kq").innerHTML="học sinh này không đủ điều kiện vào lớp 10";
+		    }	
+		}
+	</script>
+</body>
+</html>

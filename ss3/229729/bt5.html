@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xếp loại học lực</title>
+</head>
+<body>
+	Nhập Điểm kiểm tra: <input type="number" id="nhapdkt">
+	Nhập Điểm thi giữa kỳ: <input type="number" id="nhaptgk">
+	Nhập Điểm thi cuối kỳ: <input type="number" id="nhaptck">
+	<button onclick="tinh()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function tinh() {
+		   var a=parseFloat(document.getElementById("nhapdkt").value);
+		   var b=parseFloat(document.getElementById("nhaptgk").value);
+		   var c=parseFloat(document.getElementById("nhaptck").value);
+		   var DTB=(a+b+c*2)/4
+		   if(DTB>=8.0){
+		   	document.getElementById("kq").innerHTML=(DTB+ " :" +"Học sinh giỏi")
+		   } else if (DTB>=6.5){
+		   	document.getElementById("kq").innerHTML=(DTB+ " :" +" Học sinh khá")
+		   } else if (DTB>=5.0) {
+		   	document.getElementById("kq").innerHTML=(DTB+ " :" +" Học sinh trung bình")
+		   } else if (DTB>=3.5) {
+		   	document.getElementById("kq").innerHTML=(DTB+ " :" +" Học sinh yếu")
+		   } else{
+		   	document.getElementById("kq").innerHTML=(DTB+ " :" +" Học sinh kém")
+		   }
+		}
+	</script>
+</body>
+</html>

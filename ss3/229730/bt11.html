@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+	Nhập lương của bạn: <input type="number" id="nhapluong">
+	<button onclick="tinh()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function tinh() {
+		   var luong=parseFloat(document.getElementById("nhapluong").value);
+		   if (luong<=6000000) {
+		   	var thue=(luong-4000000)*5/100;
+		   	document.getElementById("kq").innerHTML=("Thuế phải đóng là: "+thue+" VNĐ")
+		   } else if (luong<=9000000) {
+		   	var thue=(luong-6000000)*5/100+(6000000-4000000)*5/100;
+		   	document.getElementById("kq").innerHTML=("Thuế phải đóng là: "+thue+" VNĐ")
+		   } else if (luong<=14000000) {
+		   	var thue=(luong-9000000)*5/100+(6000000-4000000)*5/100+(9000000-6000000)*10/100;
+		   	document.getElementById("kq").innerHTML=("Thuế phải đóng là: "+thue+" VNĐ")
+		   } else {
+		   	var thue=(luong-14000000)*5/100+(6000000-4000000)*5/100+(9000000-6000000)*10/100+(14000000-9000000)*15/100;
+		   	document.getElementById("kq").innerHTML=("Thuế phải đóng là: "+thue+" VNĐ")
+		   }
+		}
+	</script>
+</body>
+</html>

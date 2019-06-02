@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xét tam giác</title>
+</head>
+<body>
+	Nhập a: <input type="number" id="nhapa">
+	Nhập b: <input type="number" id="nhapb">
+	Nhập c: <input type="number" id="nhapc">
+	<button onclick="tinh()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function tinh() {
+		   var a=parseInt(document.getElementById("nhapa").value);
+		   var b=parseInt(document.getElementById("nhapb").value);
+		   var c=parseInt(document.getElementById("nhapc").value);
+		   if(a,b,c>0 && a+b>c && b+c>a && a+c>b){
+		   	document.getElementById("kq").innerHTML="a,b,c là ba cạnh của một tam giác"
+		   } else {
+		   	document.getElementById("kq").innerHTML="a,b,c không phải 3 cạnh của một tam giác"
+		   }
+		}
+	</script>
+</body>
+</html>

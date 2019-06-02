@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tuổi của một người</title>
+</head>
+<body>
+	Nhập a: <input type="number" id="nhapa">
+	<button onclick="tinh()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function tinh() {
+		   var a=parseInt(document.getElementById("nhapa").value);
+		   if(a>0 && a<120){
+		   	document.getElementById("kq").innerHTML="Đây là tuổi của một người"
+		   } else {
+		   	document.getElementById("kq").innerHTML="Đây không phải tuổi một người"
+		   }
+		}
+	</script>
+</body>
+</html>

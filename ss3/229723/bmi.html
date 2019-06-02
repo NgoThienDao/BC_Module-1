@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Cân nặng (Kg):<input type="number" id="weight"><br>
+Chiều cao (M):<input type="number" id="height">
+<p id="kq"></p>
+<button onclick="Kqua();">Tính</button>
+<script>
+    function Kqua(){
+        var nang = parseFloat(document.getElementById("weight").value);
+        var cao = parseFloat(document.getElementById("height").value);
+        var tinh = parseFloat(nang / (cao * cao));
+        if (tinh <18.5){
+            document.getElementById("kq").innerHTML = "Underweight";}
+        else if (tinh >18.5 && tinh <25){
+            document.getElementById("kq").innerHTML = "Normal";}
+        else if (tinh >25 && tinh <30){
+            document.getElementById("kq").innerHTML = "Overweight";}
+        else{
+            document.getElementById("kq").innerHTML = "Obese";}
+    }
+</script>
+</body>
+</html>

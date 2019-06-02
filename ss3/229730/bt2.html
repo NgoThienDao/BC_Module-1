@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>đổi mét sang feet</title>
+</head>
+<body>
+	Nhập số mét: <input type="number" id="nhapM">
+	<button onclick="nhap()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function nhap(){
+			var m=parseFloat(document.getElementById("nhapM").value);
+			var ft=m*3.2808;
+			document.getElementById("kq").innerHTML=("feet = " +ft)
+		}
+	</script>
+</body>
+</html>

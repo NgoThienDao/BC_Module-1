@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Diện tích hình vuông</title>
+</head>
+<body>
+	Nhập a: <input type="number" id="nhapa">
+	Nhập b: <input type="number" id="nhapb">
+	<button onclick="nhap()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function nhap(){
+			var a=parseFloat(document.getElementById("nhapa").value);
+			var b=parseFloat(document.getElementById("nhapb").value);
+			var S=a*b;
+			document.getElementById("kq").innerHTML=("Diện tích hình chữ nhật là: " +S)
+		}
+	</script>
+</body>
+</html>

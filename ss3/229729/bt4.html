@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tìm GTLN</title>
+</head>
+<body>
+	Nhập a: <input type="number" id="nhapa">
+	Nhập b: <input type="number" id="nhapb">
+	Nhập c: <input type="number" id="nhapc">
+	<button onclick="sosanh()">Submit</button>
+	<p id="kq"></p>
+	<script>
+		function sosanh(){
+			var a=parseInt(document.getElementById("nhapa").value);
+			var b=parseInt(document.getElementById("nhapb").value);
+			var c=parseInt(document.getElementById("nhapc").value);
+			if(a>b && a>c){
+				document.getElementById("kq").innerHTML=("max = " +a);
+			} else if(a<b && b>c){
+				document.getElementById("kq").innerHTML=("max = " +b);
+			} else
+			document.getElementById("kq").innerHTML=("max = " +c);
+		}
+	</script>
+</body>
+</html>

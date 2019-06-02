@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tính cước điện thoại</title>
+</head>
+<body>
+	Nhập số phút gọi: <input type="number" id="nhaptime">
+	<button onclick="tinh()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function tinh() {
+		   var tgian=parseFloat(document.getElementById("nhaptime").value);
+		   if (tgian>200) {
+		   	var cuocgoi=(tgian-200)*200+150*400+50*600;
+		   	document.getElementById("kq").innerHTML=("Số tiền phải nộp là: "+cuocgoi+" VNĐ")
+		   } else if (tgian>50) {
+		   	var cuocgoi=(tgian-50)*400+50*400;
+		   	document.getElementById("kq").innerHTML=("Số tiền phải nộp là: "+cuocgoi+" VNĐ")
+		   } else {
+		   	var cuocgoi=tgian*600;
+		   	document.getElementById("kq").innerHTML=("Số tiền phải nộp là: "+cuocgoi+" VNĐ")
+		   }
+		}
+	</script>
+</body>
+</html>

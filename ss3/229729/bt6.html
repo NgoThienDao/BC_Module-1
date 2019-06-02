@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tính tiền hoa hồng</title>
+</head>
+<body>
+	Nhập doanh số bán hàng: <input type="number" id="nhapds">
+	<button onclick="tinh()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function tinh() {
+		   var a=parseFloat(document.getElementById("nhapds").value);
+		   if(a<3000000){
+		   	document.getElementById("kq").innerHTML="Bạn không có hoa hồng"
+		   } else if (a<8000000){
+		   	document.getElementById("kq").innerHTML="Bạn nhận được 35% hoa hồng"
+		   } else if (a<15000000) {
+		   	document.getElementById("kq").innerHTML="Bạn nhận được 38% hoa hồng"
+		   } else if (a<20000000) {
+		   	document.getElementById("kq").innerHTML="Bạn nhận được 40% hoa hồng"
+		   } else{
+		   	document.getElementById("kq").innerHTML="Bạn nhận được 42% hoa hồng"
+		   }
+		}
+	</script>
+</body>
+</html>

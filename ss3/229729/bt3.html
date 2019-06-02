@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>So sánh với 0</title>
+</head>
+<body>
+	Nhập số: <input type="number" id="nhapso">
+	<button onclick="nhap()">Submit</button>
+	<p id="kq"></p>
+	<script>
+		function nhap(){
+			var a=parseInt(document.getElementById("nhapso").value);
+			if (a>0){
+				document.getElementById("kq").innerHTML="Số này lớn hơn 0";
+			} else {
+				document.getElementById("kq").innerHTML="Số này bé hơn 0";
+			}
+		}
+	</script>
+</body>
+</html>

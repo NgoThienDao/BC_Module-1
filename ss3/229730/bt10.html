@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tiền điện hàng tháng</title>
+</head>
+<body>
+	Nhập chỉ số mới: <input type="number" id="nhapcsm">
+	Nhập chỉ số cũ: <input type="number" id="nhapcsc">
+	<button onclick="tinh()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function tinh() {
+		   var csm=parseFloat(document.getElementById("nhapcsm").value);
+		   var csc=parseFloat(document.getElementById("nhapcsc").value);
+		   var tieuthu=csm-csc;
+		   if (tieuthu<=100) {
+		   	var tien=tieuthu*1000;
+		   	document.getElementById("kq").innerHTML=("Tiền điện tháng này là: "+tien+" VNĐ")
+		   } else if (tieuthu<=150) {
+		   	var tien=(tieuthu-100)*1200+100*1000;
+		   	document.getElementById("kq").innerHTML=("Tiền điện tháng này là: "+tien+" VNĐ")
+		   } else if (tieuthu<=200) {
+		   	var tien=(tieuthu-150)*2000+100*1000+50*1200;
+		   	document.getElementById("kq").innerHTML=("Tiền điện tháng này là: "+tien+" VNĐ")
+		   } else {
+		   	var tien=(tieuthu-200)*2000+100*1000+50*1200+50*2000;
+		   	document.getElementById("kq").innerHTML=("Tiền điện tháng này là: "+tien+" VNĐ")
+		   }
+		}
+	</script>
+</body>
+</html>
