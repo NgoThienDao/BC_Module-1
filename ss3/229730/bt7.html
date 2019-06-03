@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <h2>Phương trình có dạng ax^2 + bx + c</h2>
+    Nhập a: <input type="number" id="nhapa">
+    Nhập b: <input type="number" id="nhapb">
+    Nhập c: <input type="number" id="nhapc">
+    <button onclick="tinh()">Enter</button>
+    <p id="kq"></p>
+<script language="javascript">
+    function tinh() {
+        let a=parseInt(document.getElementById("nhapa").value);
+        let b=parseInt(document.getElementById("nhapb").value);
+        let c=parseInt(document.getElementById("nhapc").value);
+        let delta = (b*b-4*a*c);
+        if (delta == 0) {
+            let x = -b / (2*a);
+            document.getElementById("kq").innerHTML=("phương trình có nghiệm kép: " +x);
+        } else if (delta < 0) {
+            document.getElementById("kq").innerHTML=("Phương trình vô nghiệm");
+        } else {
+            let x1 = (-b + Math.sqrt(delta)) / (2*a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+           document.getElementById("kq").innerHTML=("Phương trình có 2 nghiệm phân biệt: " + x1 + " và " + x2);
+        };
+    }
+</script>
+</body>
+</html>
