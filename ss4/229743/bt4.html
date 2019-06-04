@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Số hạng fibonacci đầu tiên chia hết cho 5</title>
+</head>
+<body>
+	<script>
+		function fibonacci(num) {
+			var a = 1;
+			var b = 0;
+			var temp = parseInt(temp);
+			while (num > 0) {
+				temp = a;
+				a += b;
+				b = temp;
+				num--;
+				if (b % 5 == 0) {
+					document.write(b);
+					break;
+				}
+			}
+			return b;
+		}
+		fibonacci(10);
+	</script>
+</body>
+</html>
