@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nhiệt độ</title>
+</head>
+	Nhập nhiệt độ hiện tại: <input type="number" id="nhapdoC">
+	<button onclick="nhap()">Enter</button>
+	<p id="kq"></p>
+<body>
+	<script>
+		function nhap() {
+			let nhietdo=parseInt(document.getElementById("nhapdoC").value);
+			if (nhietdo>100) {
+				document.getElementById("kq").innerHTML=("Nhiệt độ hiện tại của bạn là: " + nhietdo + " hãy hạ nhiệt độ xuống")
+			}
+			if (nhietdo<20) {
+				document.getElementById("kq").innerHTML=("Nhiệt độ hiện tại của bạn là: " + nhietdo + " hãy tăng nhiệt độ lên")
+			}
+		}
+	</script>
+</body>
+</html>
