@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nối 2 mảng a và b vào mảng c</title>
+</head>
+<body>
+<p>Nối a và b vào c</p>
+<button onclick="noi()">Nối</button>
+<p id="kq"></p>
+<script>
+
+    function noi() {
+        var a = [1,2,3,4,5,6,7,8,9,0];
+        var b = [2,4,6,8,10,12,14,16,18,20];
+        var c = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39];
+        var d = c.concat(a);
+        var e = d.concat(b);
+        document.getElementById("kq").innerHTML = e;
+    }
+
+</script>
+</body>
+</html>
