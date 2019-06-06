@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Dictionary</title>
+</head>
+<body>
+    <h1>Từ điển tiếng Anh cơ bản</h1>
+    Nhập từ: <input type="text" id="tratu">
+    <button onclick="tim()">Search</button>
+    <p id="kq"></p>
+</body>
+    <script>
+        let eng = ['fire', 'wind', 'thunder', 'earth', 'wood', 'metal', 'water', 'dark', 'light', 'time', 'space', 'destroy', 'everlasting', 'lives', 'destiny'];
+        let viet = ['hỏa', 'phong', 'lôi', 'thổ', 'mộc', 'kim', 'thủy', 'ám', 'quang', 'thời gian', 'không gian', 'phá diệt', 'bất diệt', 'sinh mệnh', 'vận mệnh'];
+        function tim() {
+            var tu = document.getElementById("tratu").value;
+            var timkiem = 0;
+            for (i = 0;i < eng.length; i++){
+                if (tu == eng[i]){
+                    document.getElementById("kq").innerHTML = viet[i];
+                    timkiem = 1;
+                }
+                if (timkiem != 1)
+                    document.getElementById("kq").innerHTML = "Không tìm thấy";
+            }
+        }
+    </script>
+</html>

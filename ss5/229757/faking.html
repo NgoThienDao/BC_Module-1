@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+<body>
+<form name="f">
+    <h1>Typer anthing slowly</h1>
+    <textarea name="txt" cols="60" rows="20" onkeydown="typeTextarea()"> </textarea>
+</form>
+<script>
+    var a = new Array(), n = "";
+    a[1]='Đ'; a[2]='ạ'; a[3]='o'; a[4]=' '; a[5]='i'; a[6]='s'; a[7]=' '; a[8]='t'; a[9]='h'; a[10]='e'; a[11]=' '; a[12]='b'; a[13]='e'; a[14]='s'; a[15]='t'; a[16]=' ';a[17]=' ';
+    function typeTextarea() {
+        t = document.f.txt.value;
+        j = t.length;
+        if (j > 0){
+            for (var i = 1; i <= j; i++) {
+                n = n + a[i];
+                if (i == 17) {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.f.txt.value = n;
+        n = "";
+        setTimeout("typeTextarea()", 1);
+        return false;
+    }
+</script>
+</body>
+</html>

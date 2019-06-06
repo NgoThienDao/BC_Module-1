@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sắp xếp các phần tử trong mảng theo thứ tự giảm dần</title>
+</head>
+<body>
+Nhập các phần tử cho mảng: <input type="number" id="nhapso">
+<button onclick="addElement()">Add</button>
+<button onclick="displayElement()">Display</button>
+<button onclick="sortElement()">Sort</button>
+<p id="kq"></p>
+<script>
+    let a = new Array();
+    let x = 0;
+
+    function addElement() {
+        a[x] = document.getElementById("nhapso").value;
+        alert("Phần tử: " + a[x] + " được thêm vào tại vị trí " +x);
+        x++;
+        document.getElementById("nhapso").value = ""
+    }
+
+    function displayElement() {
+        let e = "<hr>";
+        for (let i = 0; i < a.length; i++) {
+            e += ("Element " + i + " = " + a[i] +"<br>");
+        }
+        document.getElementById("kq").innerHTML = e;
+    }
+    
+    function sortElement() {
+        for (let i = 0; i < a.length; i++) {
+            a.sort();
+        }
+        document.getElementById("kq").innerHTML = a;
+    }
+</script>
+</body>
+</html>

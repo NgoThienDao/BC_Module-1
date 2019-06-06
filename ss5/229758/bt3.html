@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>In giá trị lớn nhất và tính giá trị trung bình</title>
+</head>
+<body>
+<script>
+    let x = [2,3,-1,-13,43,54,35,-9,40];
+    let max = x[0];
+    var sum=0;
+    var avg;
+    for (let i = 1; i < x.length; i++) {
+        if (x[i] > max) {
+            max = x[i];
+        }
+        sum = sum + x[i];
+        avg = sum / i;
+    }
+    document.write("Giá trị lớn nhất của mảng: " + max);
+    document.write("<br>");
+    document.write("Giá trị trung bình của mảng: " + avg);
+</script>
+</body>
+</html>

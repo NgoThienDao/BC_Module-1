@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm tra số nguyên v</title>
+</head>
+<body>
+    <script>
+        let v = prompt("Nhập số nguyên v: ");
+        let a = [1,3,-1,4,-7,10,12,33,14,-98];
+        for (i = 0; i < a.length; i++)  {
+            if (v == a[i]){
+                document.write("Element: " + i + " : " + " v is in the array");
+                document.write("<br>");
+            } else {
+                document.write("Element: " + i + " : " + " v is not in the array");
+                document.write("<br>");
+            }
+        }
+    </script>
+</body>
+</html>

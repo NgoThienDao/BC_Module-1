@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Xóa phần tử số nguyên v ra khỏi mảng</title>
+</head>
+<body>
+<script>
+    var v = prompt("Nhập số nguyên v: ");
+    var x = [0,1,2,3,4,5,2,7,1,9];
+    for (i = 0; i < x.length; i++) {
+        if (v == x[i]) {
+            x.splice(i, 1);
+            x.push(0);
+        }
+    }
+    document.write(x);
+</script>
+</body>
+</html>

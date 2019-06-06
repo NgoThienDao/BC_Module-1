@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đảo ngược các phần tử trong mảng</title>
+</head>
+<body>
+Nhập phần tử: <input type="text" id="nhapso">
+<button onclick="addElement()">Add</button>
+<button onclick="displayElement()">Display</button>
+<button onclick="reverseElement()">Reverse</button>
+<p id="kq"></p>
+<script>
+    let x = 0;
+    let a = new Array ();
+
+    function addElement() {
+        a[x] = document.getElementById("nhapso").value;
+        alert("Phần tử: " + a[x] + " được thêm vào tại vị trí" + " " + x);
+        x++;
+        document.getElementById("nhapso").value = "";
+    }
+
+    function displayElement() {
+        let e = "<hr>";
+        for (i = 0; i < a.length; i++){
+            e += ("Element " + i + " = " + a[i] + "<br>");
+        }
+        document.getElementById("kq").innerHTML = e;
+    }
+
+    function reverseElement() {
+        let first = 0;
+        let last = a.length - 1;
+        while (first < last) {
+            let b = a[first];
+            a[first] = a[last];
+            a[last] = b;
+            first++;
+            last--;
+        }
+        document.getElementById("kq").innerHTML = a;
+    }
+
+</script>
+</body>
+</html>
