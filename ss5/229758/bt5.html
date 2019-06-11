@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đếm số nguyên âm trong chuỗi</title>
+</head>
+<body>
+<script>
+    var x = "Ngo -2 Thien 2 Dao -3 THY -0";
+    var dem = 0;
+    var a = x.split(" ");
+    for (var i = 0; i < a.length; i++){
+        if (a[i] < 0) {
+            dem ++;
+        }
+    }
+    document.write(a);
+    document.write("<br>");
+    document.write("Có " + dem + " số nguyên âm");
+</script>
+</body>
+</html>
