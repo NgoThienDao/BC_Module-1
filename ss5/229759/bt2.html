@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+Nhập ký tự: <input type="text" id="nhap">
+<button onclick="addElement()">Add</button>
+<button onclick="reverseElement()">Reverse</button>
+<p id="kq"></p>
+<script>
+    let x = 0;
+    let a = [];
+
+    function addElement() {
+        a[x] = document.getElementById("nhap").value;
+        x++;
+        let e = "<hr>";
+        for (i = 0; i < a.length; i++) {
+            e += ("Element " + i + " = " + a[i] + "<br>");
+        }
+        document.getElementById("kq").innerHTML = e
+    }
+
+    function reverseElement() {
+        document.getElementById("kq").innerHTML = a.reverse().join("")
+    }
+
+</script>
+</body>
+</html>

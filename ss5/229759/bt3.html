@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đếm số ký tự số có trong chuỗi</title>
+</head>
+<body>
+<h1>Đếm số ký tự số có trong mảng</h1>
+<button onclick="dem()">Đếm</button>
+<p id="kq"></p>
+<script>
+
+    function dem() {
+        var a = ['d', 'a', 'o', '1', '9', '9', '6'];
+        var b = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        var dem = 0;
+
+        for (var i = 0; i < a.length; i++) {
+            for  (var j = 0; j < b.length; j++) {
+                if (a[i] == b[j]) {
+                    dem++;
+                }
+            }
+        }
+        document.getElementById("kq").innerHTML = ("Có " + dem + " ký tự số trong mảng");
+    }
+
+</script>
+</body>
+</html>

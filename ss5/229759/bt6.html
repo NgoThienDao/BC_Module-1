@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thay thế ký tự (-) bằng (_)</title>
+</head>
+<body>
+<script>
+    var a = ['1', '-', '9', '9', '6', '-'];
+
+    function find (x) {
+        var timkiem = false;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === x) {
+                timkiem = true;
+            }
+        }
+        if (!timkiem)
+            document.write('Không có ' + x + ' trong mảng!' + "<br>");
+         else
+            document.write('Có ' + x + ' trong mảng' + "<br>");
+    }
+
+    function replace (x, y) {
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] == x)
+                a[i] = y;
+        }
+        document.write(a + "<br>");
+    }
+
+    find('-');
+    replace('-', '_');
+    
+</script>
+</body>
+</html>
