@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số nguyên tố đầu tiên</title>
+</head>
+<body>
+<label>Nhập vào số lượng</label>
+<input type="number" id="nhapSo" placeholder="SNT muốn hiển thị" oninput="inSNT(this.value)" onchange="inSNT(this.value)">
+<p id="kq"></p>
+
+<script>
+
+    function kiemtraSNT(n) {
+        var soNhap = true;
+        if (n < 2) {
+            soNhap = false;
+        } else {
+            for (var i = 2; i < n - 1; i++) {
+                if (n % i == 0) {
+                    soNhap = false;
+                    break;
+                }
+            }
+        }
+        return soNhap;
+    }
+    
+    function inSNT() {
+        var so = parseInt(document.getElementById("nhapSo").value);
+        var dem = '';
+        for (var i = 1; i <= so; i++) {
+            if (kiemtraSNT(i)) {
+                dem += i + "<br>";
+            }
+        }
+        document.getElementById("kq").innerHTML = dem;
+    }
+
+</script>
+</body>
+</html>
