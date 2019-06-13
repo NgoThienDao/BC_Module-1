@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    function fibonacci(num) {
+        var a = 1;
+        var b = 0;
+        var temp = parseInt(temp);
+        while (num > 0) {
+            temp = a;
+            a = a + b;
+            b = temp;
+            num--;
+            document.write(b + " ");
+
+        }
+        return b;
+    }
+    fibonacci(40);
+</script>
+</body>
+</html>

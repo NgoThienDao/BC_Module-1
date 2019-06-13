@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của 1 số bất kỳ</title>
+</head>
+<body>
+<input type="number" id="nhapso" placeholder="Nhập số bất kỳ"
+       oninput="factorial(this.value)"
+       onchange="factorial(this.value)">
+<p id="kq"></p>
+<script>
+
+    function factorial(n) {
+        j = 1;
+        for (i = 1; i <= n; i++)  {
+            j = i * j;
+        }
+        document.getElementById("kq").innerHTML = "Giai thừa của " + n + " là : " + j;
+    }
+
+</script>
+</body>
+</html>
