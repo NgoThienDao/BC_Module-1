@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tính tiền lãi mỗi tháng</title>
+</head>
+<body>
+	Nhập số tiền vay ngân hàng: <input type="number" id="nhapmoney">
+	Nhập thời hạn vay (tính bằng tháng): <input type="number" id="nhaptime">
+	<button onclick="tinh()">Enter</button>
+	<p id="kq"></p>
+	<script>
+		function tinh() {
+		   var time=parseFloat(document.getElementById("nhaptime").value);
+		   var money=parseFloat(document.getElementById("nhapmoney").value);
+		   if (time<=12) {
+		   	var lai=money*8.1/100/12;
+		   	document.getElementById("kq").innerHTML=("Tiền lãi tháng này là: "+lai+" VNĐ")
+		   } else if (time<=24) {
+		   	var lai=money*8.9/100/12;
+		   	document.getElementById("kq").innerHTML=("Tiền lãi tháng này là: "+lai+" VNĐ")
+		   } else {
+		   	var lai=money*9.4/100/12;
+		   	document.getElementById("kq").innerHTML=("Tiền lãi tháng này là: "+lai+" VNĐ")
+		   } 
+		}
+	</script>
+</body>
+</html>
