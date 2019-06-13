@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất trong 3 số bất kỳ nhập vào</title>
+</head>
+<body>
+Nhập a: <input type="number" id="nhapa">
+Nhập b: <input type="number" id="nhapb">
+Nhập c: <input type="number" id="nhapc">
+<button onclick="gtnn()">Min</button>
+<p id="kq"></p>
+<script>
+
+    function gtnn() {
+        var a = parseInt(document.getElementById("nhapa").value);
+        var b = parseInt(document.getElementById("nhapb").value);
+        var c = parseInt(document.getElementById("nhapc").value);
+        if (a < b && a < c)
+            document.getElementById("kq").innerHTML = "Min là : " + a;
+        else if (b < a && a < c)
+            document.getElementById("kq").innerHTML = "Min là : " + b;
+        else if (a < b && c < a)
+            document.getElementById("kq").innerHTML = "Min là : " + c;
+    }
+
+</script>
+</body>
+</html>

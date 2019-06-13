@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính bình phương</title>
+</head>
+<body>
+<p>
+    Nhập số: <input type="number" id="nhapa" placeholder="input" oninput="inputNum(this.value)" onchange="inputNum(this.value)">
+    <p id="kq"></p>
+</p>
+<script>
+
+    function inputNum(a) {
+        var a = parseInt(a);
+        document.getElementById("kq").innerHTML = "Bình phương của " + a + " là : " + a * a;
+    }
+
+</script>
+</body>
+</html>

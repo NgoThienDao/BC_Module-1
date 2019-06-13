@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển đổi giữa feet và meter</title>
+</head>
+<body>
+<bu>
+    <label>Chuyển đổi giữa feet và meter</label>
+    <input type="number" id="inputFeet" placeholder="Nhập số feet"
+           onsubmit="convertF(this.value)"
+           onchange="convertF(this.value)">
+    <input type="number" id="inputMeter" placeholder="Nhập số meter"
+           onsubmit="convertM(this.value)"
+           onchange="convertM(this.value)">
+    <button onclick="Submit()">Submit</button>
+    </p>
+    <p>Kết quả chuyển đổi : <span id="kq"></span></p>
+    <script>
+
+        function convertF(feet) {
+            feet = parseFloat(feet);
+            var meter = feet / 3.279;
+            document.getElementById("kq").innerHTML = meter.toFixed(3) + " meter";
+        }
+
+        function convertM(meter) {
+            meter = parseFloat(meter);
+            var feet = meter / 0.305;
+            document.getElementById("kq").innerHTML = feet.toFixed(3) + " feet";
+        }
+
+    </script>
+</body>

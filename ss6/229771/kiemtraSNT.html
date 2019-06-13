@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<p>
+    <label>Số nguyên tố</label>
+    <input type="number" id="nhapSo1" placeholder="Nhập số muốn kiểm tra" oninput="kiemtraSNT(this.value)" onchange="kiemtraSNT(this.value)">
+</p>
+
+<p>Kiểm tra số nguyên tố: <span id="checkSNT"></span></p>
+
+<script>
+
+    function kiemtraSNT(n) {
+        var soNhap = true;
+        if (n < 2) {
+            soNhap = false;
+        } else {
+            for (var i = 2; i < n - 1; i++) {
+                if (n % i == 0) {
+                    soNhap = false;
+                    break;
+                }
+            }
+        }
+        if (soNhap == true) {
+            document.getElementById("checkSNT").innerHTML = (n + " là số nguyên tố");
+        } else {
+            document.getElementById("checkSNT").innerHTML = (n + " không phải số nguyên tố");
+        }
+    }
+
+</script>
+</body>
+</html>

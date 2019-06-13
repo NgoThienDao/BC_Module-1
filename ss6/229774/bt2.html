@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi và diện tích hình tròn</title>
+</head>
+<body>
+<input type="number" id="nhapr" placeholder="Nhập bán kính">
+<button onclick="dienTich()">Diện Tích</button>
+<button onclick="chuVi()">Chu Vi</button>
+<p id="kq"></p>
+<script>
+    var pi = 3.14;
+
+    function dienTich() {
+        var r = parseFloat(document.getElementById("nhapr").value);
+        var s = pi * r * r;
+        document.getElementById("kq").innerHTML = "Diện tích hình tròn : " + s + " m^2" +"<br>";
+    }
+
+    function chuVi() {
+        var r = parseFloat(document.getElementById("nhapr").value);
+        var c = 2 * pi * r;
+        document.getElementById("kq").innerHTML = "Chu vi hình tròn : " + c + " m";
+    }
+
+</script>
+</body>
+</html>

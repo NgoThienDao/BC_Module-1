@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra mảng</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="Nhập ký tự" oninput="checkElement(this.value)" onchange="checkElement(this.value)">
+<p id="kq"></p>
+<script>
+    var arrChar = ['d', 'a', 'o', '1', '9', '9', '6'];
+
+    function checkElement() {
+        var kyTu = document.getElementById("nhap").value;
+        var search = false;
+        for (var i = 0; i < arrChar.length; i++) {
+            if (kyTu == arrChar[i]) {
+                document.getElementById("kq").innerHTML = "Có " + arrChar[i] + " trong mảng ở vị trí " + i
+                search = true;
+            }
+            if (search == false) {
+                document.getElementById("kq").innerHTML = "-1"
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

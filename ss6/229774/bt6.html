@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<input type="number" id="nhapso" placeholder="nhập số bất kỳ"
+       oninput="kiemTra(this.value)"
+       onchange="kiemTra(this.value">
+<p id="kq"></p>
+<script>
+    
+    function kiemTra(num) {
+        var num = document.getElementById("nhapso").value;
+        if (num > 0)
+            document.getElementById("kq").innerHTML = "true";
+        else
+            document.getElementById("kq").innerHTML = "false";
+    }
+
+</script>
+</body>
+</html>

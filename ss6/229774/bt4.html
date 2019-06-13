@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự số</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="nhập ký tự" oninput="kiemTra(this.value)" onchange="kiemTra(this.value)">
+<p id="kq"></p>
+<script>
+    var strNum = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+    function kiemTra(tu) {
+        var tu = document.getElementById("nhap").value;
+        var search = false;
+        for (var i = 0; i < strNum.length; i++) {
+            if (tu == strNum[i]) {
+                document.getElementById("kq").innerHTML = "true";
+                search = true;
+            }
+            if (search == false) {
+                document.getElementById("kq").innerHTML = "false";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

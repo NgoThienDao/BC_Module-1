@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngôi sao này thuộc về chòm sao nào</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="Nhập tên sao" oninput="convertStars(this.value)" onchange="convertStars(this.value)">
+<p id="result"></p>
+<script>
+    let arrStars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dudhe', 'Regulus'];
+    let arrConstellations = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function convertStars() {
+        var star = document.getElementById("nhap").value;
+        var search = false;
+        for (var i = 0; i < arrStars.length; i++) {
+            if (star == arrStars[i]) {
+                document.getElementById("result").innerHTML = "Chòm sao " + arrConstellations[i];
+                search = true;
+            }
+            if (search == false) {
+                document.getElementById("result").innerHTML = "Không tìm thấy ngôi sao nào";
+            }
+        }
+    }
+</script>
+</body>
+</html>
