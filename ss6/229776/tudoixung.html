@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<input type="text" id="nhapChuoi" placeholder="Nhập từ bất kỳ">
+<button onclick="kiemTra()">Check</button>
+<p id="kq"></p>
+<script>
+
+    function kiemTra() {
+        var str = document.getElementById("nhapChuoi").value;
+        if (str == str.split('').reverse().join(''))
+            document.getElementById("kq").innerHTML = ("Từ này đối xứng");
+        else
+            document.getElementById("kq").innerHTML = ("Từ này không đối xứng");
+    }
+
+</script>
+</body>
+</html>
