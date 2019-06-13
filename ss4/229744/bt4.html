@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình chữ nhật rỗng</title>
+</head>
+<body>
+<script>
+
+    function inHinhChuNhat(n, m) {
+
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= m; j++) {
+                if (i == 1 || j == 1 || i == n || j == m) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+
+        inHinhChuNhat(12, 20);
+
+</script>
+</body>
+</html>
