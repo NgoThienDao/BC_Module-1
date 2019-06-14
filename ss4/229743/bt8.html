@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="play()">Play</button>
+<script>
+    
+    function play() {
+        var score = 3;
+        while (true) {
+            var soMuonDoan = parseInt(prompt("Nhập vào số bạn đoán: "));
+            var soNgauNhien = Math.round(Math.random());
+            if (soMuonDoan == soNgauNhien) {
+                alert("Chúc mừng bạn");
+            } else if (soMuonDoan > soNgauNhien) {
+                alert("Số bạn đoán lớn hơn số hệ thống, bạn hãy chọn lại");
+                score--;
+            } else if (soMuonDoan < soNgauNhien) {
+                alert("Số bạn đoán bé hơn số hệ thống, bạn hãy chọn lại");
+                score--;
+            }
+            if (score == 0) {
+                alert("Game over");
+                break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
