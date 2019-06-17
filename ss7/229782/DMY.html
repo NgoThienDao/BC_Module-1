@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+<div>Xây dựng lớp Date</div>
+<button type="button" onclick="get()">Get</button>
+<button type="button" onclick="string()">String</button>
+<p id="result"></p>
+<script language="JavaScript">
+
+    function set() {
+        var date = new Date ();
+        date.setDate(10);
+        date.setMonth(10);
+        date.setFullYear(2019);
+        date.setHours(20);
+        date.setMinutes(20);
+        date.setSeconds(30);
+        date.setMilliseconds(100);
+    }
+
+    function get() {
+        set();
+        var date = new Date();
+        var myDate = "Ngày: " + date.getDate() + "<br>";
+        myDate += "Tháng: " + date.getMonth() + "<br>";    //trả về tháng trong năm (0-11)
+        myDate += "Năm: " + date.getFullYear() + "<br>";
+        myDate += "Giờ: " + date.getHours() + "<br>";
+        myDate += "Phút: " + date.getMinutes() + "<br>";
+        myDate += "Giây: " + date.getSeconds() + "<br>";
+        myDate += "Mili giây: " + date.getMilliseconds() + "<br>";
+        document.getElementById("result").innerHTML = myDate;
+    }
+
+    function string() {
+        var date = new Date();
+        var myDate = "Ngày/tháng/năm: " + date.toLocaleDateString() + "<br>";
+        document.getElementById("result").innerHTML = myDate;
+    }
+</script>
+</body>
+</html>
