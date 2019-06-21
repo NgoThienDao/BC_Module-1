@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Teamperature</title>
+</head>
+<body>
+<script>
+
+    function Temperature(celcius) {
+        this.celcius = celcius;
+
+        this.getCelcius = function () {
+                return celcius;
+        }
+
+        this.getKelvin = function () {
+            return this.celcius + 273;
+        }
+
+        this.getFahrenheit = function () {
+            return this.celcius * 9 / 5 + 32;
+        }
+    }
+
+    var temperature = new Temperature(25);
+    document.write("Với độ C là: " + temperature.getCelcius() + " thì " + "<br>");
+    document.write("Độ K = " + temperature.getKelvin() + "<br>");
+    document.write("Độ F = " + temperature.getFahrenheit());
+
+</script>
+</body>
+</html>
